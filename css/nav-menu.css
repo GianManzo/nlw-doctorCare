@@ -1,0 +1,29 @@
+.navMenu{
+    display: flex;
+    height: var( --nav-height);     
+    left: 50%;
+    position: fixed;
+    top: 0;
+    transform: translateX(-50%);
+    transition: background 100ms;
+}
+
+.navMenu .container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+nav.scroll{
+    background: var(--primary--color);
+    width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path{
+    fill: white;
+}
+
+ nav.scroll button path{
+    stroke: white;
+ }

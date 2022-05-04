@@ -1,0 +1,88 @@
+nav .close-menu,
+body.menuExpanded > :not(nav),
+.mobileMenu, body.menuExpanded .open-menu{
+    display: none;
+}
+
+
+body.menuExpanded {
+    overflow: hidden;
+}
+
+body.menuExpanded .close-menu{
+    display: block;
+    opacity: 1;
+}
+
+nav .close-menu, nav .open-menu{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body.menuExpanded .mobileMenu {
+    background: var(--primary--color);
+    height: 100vh;
+    left: 0;
+    opacity: 1;
+    padding-top: var(--nav-height);
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100vw;
+}
+
+body.menuExpanded nav{
+    position: relative;
+}
+
+body.menuExpanded .logo, body.menuExpanded nav button{
+    position: relative;
+    z-index: 100;
+}
+
+body.menuExpanded .logo path{
+    fill: white;
+}
+
+body.menuExpanded button path{
+    stroke: white;
+}
+
+/*============== OPEN MOBILE MENU ===========*/
+.mobileMenu__ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3.75rem;
+}
+
+.mobileMenu__ul a{
+    color: white;
+    font: bold 1.5rem var(--body-font);
+}
+
+.btn-menu{
+    align-items: center;
+    background: white;
+    border-radius: 2.5rem;    
+    color: var(--primary--color);
+    display: flex;
+    font: bold 1.123rem var(--body-font)  ;
+    height: 2.43rem;
+    justify-content: center;
+    line-height: 1.43rem;
+    margin: 3rem auto 5rem auto;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    width: 17.125rem;
+    
+}
+
+.social{
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+

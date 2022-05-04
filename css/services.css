@@ -1,0 +1,29 @@
+.container__services{
+    background: white;
+    margin-top: 6.25rem; 
+}
+
+.header--title{
+    font: bold 1.875rem var(--body-font);
+    margin-bottom: 3.75rem;
+    margin-top: 1rem;
+}
+.cards{
+    display: flex;
+}
+.card{
+    height: 12.93rem;
+    text-align: start;
+    width: 20.43rem;
+    padding: 1.5rem; /*REMOVENDO O PADDING SWIPER NAO QUEBRA*/
+}
+
+.card--title{
+    font: bold 1.5rem var(--body-font);
+    margin-block: 1rem;
+}
+.card--text{
+    font: normal 1rem var(--body-font);
+    color: var(--secondary--color);
+    line-height: 150%;
+}
