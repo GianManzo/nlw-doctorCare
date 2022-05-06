@@ -1,29 +1,35 @@
-.container__services{
-    background: white;
-    margin-top: 6.25rem; 
+.services {
+  background: white;
+  margin-top: 4.25rem;
 }
 
-.header--title{
-    font: bold 1.875rem var(--body-font);
-    margin-bottom: 3.75rem;
-    margin-top: 1rem;
+.header--title {
+  font: bold 1.875rem var(--body-font);
+  margin-bottom: 3.75rem;
+  margin-top: 1rem;
 }
-.cards{
-    display: flex;
+.cards {
+  display: flex;
 }
-.card{
-    height: 12.93rem;
-    text-align: start;
-    width: 20.43rem;
-    padding: 1.5rem; /*REMOVENDO O PADDING SWIPER NAO QUEBRA*/
+.card {
+  height: 12.93rem;
+  text-align: start;
+  width: 20.43rem;
+}
+.card--title {
+  font: bold 1.5rem var(--body-font);
+  margin-block: 1rem;
+}
+.card--text {
+  color: var(--secondary--color);
+  font: normal 1rem var(--body-font);
+  line-height: 150%;
 }
 
-.card--title{
-    font: bold 1.5rem var(--body-font);
-    margin-block: 1rem;
+.services circle {
+  fill: var(--primary--color--light);
 }
-.card--text{
-    font: normal 1rem var(--body-font);
-    color: var(--secondary--color);
-    line-height: 150%;
+
+.services path {
+  stroke: var(--primary--color);
 }

@@ -1,29 +1,134 @@
-.navMenu{
-    display: flex;
-    height: var( --nav-height);     
-    left: 50%;
-    position: fixed;
-    top: 0;
-    transform: translateX(-50%);
-    transition: background 100ms;
+.navMenu {
+  display: flex;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transition: background 100ms;
+  z-index: 100;
 }
 
-.navMenu .container{
+.navMenu .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+nav path[fill*='#00856F'] {
+  fill: var(--primary--color);
+}
+
+nav.scroll {
+  background: var(--primary--color);
+}
+
+nav.scroll .logo path {
+  fill: white;
+}
+
+nav.scroll button path {
+  stroke: white;
+}
+
+nav button path {
+  stroke: var(--primary--color);
+}
+@media (min-width: 1024px) {
+  /*------RESET-----*/
+  nav#nav .container * {
+    background-color: initial;
+    color: initial;
+    display: initial;
+    margin: 0;
+    flex-direction: initial;
+    font-size: initial;
+    font-weight: initial;
+    opacity: initial;
+    padding: 0;
+    position: initial;
+    transform: initial;
+    visibility: initial;
+  }
+  /*-------MENU------*/
+  nav#nav .container {
+    margin-inline: 7.79rem;
+    width: 100%;
+  }
+  nav#nav .mobileMenu {
     align-items: center;
     display: flex;
-    justify-content: center;
     justify-content: space-between;
-}
+    width: 65%;
+  }
+  nav#nav .mobileMenu__ul:nth-child(1) {
+    display: flex;
+    gap: 2rem;
+  }
+  nav#nav .mobileMenu__ul li a {
+    color: var(--primary--color);
+    line-height: 1.31rem;
+    opacity: 0.7;
+    transition: opacity 300ms;
+  }
 
-nav.scroll{
-    background: var(--primary--color);
-    width: 100vw;
-}
+  nav#nav .mobileMenu__ul li a:hover {
+    font-weight: 700;
+    opacity: 1;
+  }
 
-nav.scroll svg:nth-child(1) path{
-    fill: white;
-}
+  nav#nav .mobileMenu__ul li a::after {
+    background-color: var(--primary--color);
+    bottom: -1.39rem;
+    content: '';
+    display: flex;
+    height: 0.125rem;
+    left: -0.37rem;
+    position: relative;
+    transition: width 300ms;
+    width: 0%;
+  }
 
- nav.scroll button path{
-    stroke: white;
- }
+  nav#nav .mobileMenu__ul li a:hover::after {
+    padding-inline: 0.5rem;
+    width: 100%;
+  }
+
+  nav#nav.scroll .mobileMenu__ul li a {
+    color: white;
+    opacity: 0.6;
+  }
+
+  nav#nav.scroll .mobileMenu__ul li a:hover {
+    opacity: 1;
+  }
+
+  nav#nav.scroll .mobileMenu__ul li a::after {
+    background-color: white;
+  }
+
+  nav#nav .mobileMenu .btn {
+    border: 1px solid var(--primary--color);
+    color: var(--primary--color);
+    display: flex;
+    font: bold 0.875rem var(--body-font);
+    justify-content: center;
+    line-height: 1.125rem;
+    padding: 0.625rem 1.5rem;
+    transition: 300ms;
+  }
+
+  nav#nav .mobileMenu .btn:hover {
+    background-color: var(--primary--color);
+    color: white;
+  }
+
+  nav#nav.scroll .mobileMenu .btn {
+    border-color: white;
+    color: white;
+  }
+  nav#nav.scroll .mobileMenu .btn:hover {
+    background-color: var(--primary--color);
+    filter: brightness(1.2);
+  }
+}
