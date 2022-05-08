@@ -34,7 +34,7 @@ nav.scroll button path {
 nav button path {
   stroke: var(--primary--color);
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   /*------RESET-----*/
   nav#nav .container * {
     background-color: initial;
@@ -52,7 +52,7 @@ nav button path {
   }
   /*-------MENU------*/
   nav#nav .container {
-    margin-inline: 7.79rem;
+    padding: 2rem;
     width: 100%;
   }
   nav#nav .mobileMenu {
@@ -63,13 +63,13 @@ nav button path {
   }
   nav#nav .mobileMenu__ul:nth-child(1) {
     display: flex;
-    gap: 2rem;
+    gap: 7rem;
   }
   nav#nav .mobileMenu__ul li a {
     color: var(--primary--color);
     line-height: 1.31rem;
     opacity: 0.7;
-    transition: opacity 300ms;
+    transition: 300ms;
   }
 
   nav#nav .mobileMenu__ul li a:hover {
@@ -85,8 +85,20 @@ nav button path {
     height: 0.125rem;
     left: -0.37rem;
     position: relative;
-    transition: width 300ms;
+    transition: 300ms;
     width: 0%;
+  }
+
+  nav#nav .mobileMenu__ul li .active::after {
+    background-color: var(--primary--color);
+    bottom: -1.39rem;
+    content: '';
+    display: flex;
+    height: 0.125rem;
+    position: relative;
+    transition: 300ms;
+    padding-inline: 0.45rem;
+    width: 100%;
   }
 
   nav#nav .mobileMenu__ul li a:hover::after {
@@ -130,5 +142,11 @@ nav button path {
   nav#nav.scroll .mobileMenu .btn:hover {
     background-color: var(--primary--color);
     filter: brightness(1.2);
+  }
+}
+
+@media (min-width: 1300px) {
+  nav#nav .mobileMenu {
+    width: 63%;
   }
 }

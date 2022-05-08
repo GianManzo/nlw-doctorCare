@@ -5,8 +5,8 @@
   --primary--color--light: hsl(var(--hue) 23% 89%);
   --primary--color--beige: hsl(var(--hue) 100% 97%);
 
-  --secondary--color: hsl(var(--hue) 210 9% 31%);
-  --secondary--color-headline: hsl(var(--hue) 210 11% 15%);
+  --secondary--color: hsl(var(--hue) 9% 31%);
+  --secondary--color-headline: hsl(var(--hue) 11% 15%);
   --nav-height: 4.5rem;
   --body-font: 'DM Sans', sans-serif;
 }
@@ -59,12 +59,21 @@ section {
 }
 
 .container {
-  width: min(20.43rem, 100%);
   margin-inline: auto;
   text-align: center;
+  width: min(20.43rem, 100%);
 }
 
-@media (min-width: 1024px) {
-  .container {
+@media (min-width: 1200px) {
+  body {
+    overflow: auto;
+  }
+
+  main .header--title {
+    font-size: 2.5rem;
+  }
+
+  body .title {
+    font-size: 3rem;
   }
 }

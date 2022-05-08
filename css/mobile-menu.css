@@ -89,7 +89,7 @@ body.menuExpanded button path {
   gap: 2rem;
   justify-content: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   nav#nav .close-menu,
   nav#nav .open-menu,
   nav#nav .social {

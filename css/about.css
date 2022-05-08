@@ -5,3 +5,29 @@
   margin-top: 3.75rem;
   margin-bottom: 3.25rem;
 }
+@media (min-width: 900px) {
+  #about {
+    padding-inline: 2rem;
+  }
+
+  #about .container {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4.18rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #about img {
+    width: 30rem;
+  }
+
+  #about .about__header {
+    max-width: 35.81rem;
+  }
+
+  #about .header--title {
+    max-width: 27.93rem;
+  }
+}

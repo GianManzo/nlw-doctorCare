@@ -1,6 +1,30 @@
+// ------------------FUNCTION-MANAGER------------------
 function onScroll() {
   showNavScroll()
   backToTop()
+  activeMenu(home)
+  activeMenu(services)
+  activeMenu(about)
+  activeMenu(contact)
+}
+
+function activeMenu(section) {
+  const targetLine = scrollY + innerHeight / 2
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+  const sectionEndsAt = sectionTop + sectionHeight
+  const sectionEndReachOrPassedTargetLine = sectionEndsAt <= targetLine
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndReachOrPassedTargetLine
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(
+    `.mobileMenu a[href*=${sectionId}]`
+  )
+  menuElement.classList.remove('active')
+  if (sectionBoundaries) {
+    menuElement.classList.add('active')
+  }
 }
 
 function showNavScroll() {
@@ -27,14 +51,13 @@ for (const link of links) {
 }
 
 const toggle = document.querySelectorAll('nav .toggle')
-
 for (const element of toggle) {
   element.addEventListener('click', function (event) {
     body.classList.toggle('menuExpanded')
   })
 }
 
-// ------------------ SWIPER
+//------------------SWIPER------------------
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
@@ -43,17 +66,21 @@ const swiper = new Swiper('.swiper', {
   },
   mousewheel: true,
   keyboard: true,
-  loop: true,
-  effect: 'slide',
+  loop: false,
   breakpoints: {
+    //para as @mediaquerie
     900: {
-      slidesPerView: 2,
+      slidesPerView: 2, //apartir de 767px add 2 por pag
+      setWrapperSize: true
+    },
+    1300: {
+      slidesPerView: 3, //apartir de 767px add 2 por pag
       setWrapperSize: true
     }
   }
 })
 
-// ------------------ SCROLL REVEAL
+// ------------------SCROLL-REVEAL------------------
 
 const scrollReveal = ScrollReveal({
   origin: 'top',

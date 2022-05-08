@@ -22,3 +22,23 @@
 .contact li path {
   stroke: var(--primary--color);
 }
+@media (min-width: 900px) {
+  #contact {
+    padding-inline: 2rem;
+  }
+  #contact .container {
+    align-items: center;
+    display: flex;
+    gap: 8.81rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #contact .contact__header {
+    width: 25.25rem;
+  }
+
+  #contact img {
+    max-width: 35.93rem;
+  }
+}

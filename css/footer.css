@@ -1,14 +1,12 @@
 .footer {
   background: var(--primary--color);
-  height: 17.8rem;
+  height: auto;
+  margin-top: 10rem;
 }
 
 .container__footer {
+  padding-block: 3.75rem;
   text-align: start;
-}
-
-.footer__logo {
-  margin-top: 3.75rem;
 }
 
 .footer__text {
@@ -22,4 +20,16 @@
 .footer__social {
   display: flex;
   gap: 2rem;
+}
+@media (min-width: 900px) {
+  #footer .container {
+    width: 100%;
+  }
+  .container__footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.75rem;
+    padding: 4rem 7.68rem;
+  }
 }

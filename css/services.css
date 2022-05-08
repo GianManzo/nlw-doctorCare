@@ -26,10 +26,35 @@
   line-height: 150%;
 }
 
+.card--style {
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-inline: 0.1rem;
+  padding: 1rem;
+}
+
+.cards {
+  margin-bottom: 5rem;
+}
+
 .services circle {
   fill: var(--primary--color--light);
 }
 
 .services path {
   stroke: var(--primary--color);
+}
+@media (min-width: 768px) {
+  #services .container {
+    width: 100%;
+  }
+
+  #services .card--style {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-inline: 2rem;
+    padding: 2rem;
+  }
+  .swiper {
+    margin-inline: 2rem;
+  }
 }
